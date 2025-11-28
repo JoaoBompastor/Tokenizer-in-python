@@ -43,7 +43,7 @@ class tokenizer:
         return True
 
         
-    def parse_token(self, possible_token: str) -> tuple[str, ValidTokens]:
+    def parse_token(self, possible_token: str) -> tuple[str, ValidTokens]: # type: ignore
         """_summary_: eu quero que esse metodo retorne um token valido
 
         Returns:
