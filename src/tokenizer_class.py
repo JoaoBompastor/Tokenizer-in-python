@@ -43,5 +43,21 @@ class tokenizer:
         return True
 
         
-    def parse_token(self) -> bool:
-        return True
+    def parse_token(self, possible_token: str) -> tuple[str, ValidTokens]:
+        """_summary_: eu quero que esse metodo retorne um token valido
+
+        Returns:
+            bool: _description_
+        """
+        for char in possible_token:
+            if char == " ":
+                return (" ", ValidTokens.SPACE_TOKEN)
+
+            if char.isalpha():
+                return (char, ValidTokens.CHAR_TOKEN)
+            
+            if char.isnumeric():
+                return (char, ValidTokens.NUM_TOKEN)
+
+            else:
+                return (char, ValidTokens.ERR_TOKEN)

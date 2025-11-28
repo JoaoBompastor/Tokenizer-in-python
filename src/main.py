@@ -12,8 +12,7 @@ def main():
           ValidTokens.CHAR_TOKEN,
     ))
     print(_tokenizer)
-
-
+    print(_tokenizer.parse_token(" "))
 
 
 if __name__ == "__main__":
